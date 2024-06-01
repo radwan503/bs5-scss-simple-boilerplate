@@ -1,0 +1,246 @@
+/**
+* Template Name: kids_cinema
+* Template URL: 
+* Author: kids_cinema
+*/
+/* Fonts */
+:root {
+  --font-default: "Roboto Flex", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Lato", sans-serif;
+}
+
+/* Global Colors */
+:root {
+  --color-default: #1e1d24;
+  --color-background: #1e1d24;
+  --color-primary: #d197ff;
+  --color-secondary: #6a46f8;
+  --color-text: #d197ff;
+  --color-white: #fff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-default);
+  background-color: var(--color-background);
+  font-family: var(--font-default);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgba(var(--color-primary-rgb), 0.7);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  padding: 0;
+}
+#topbar .navbar-brand img {
+  width: 80%;
+}
+#topbar .search-input-form {
+  width: 39.37rem;
+  height: 45px;
+  border: 1px solid #453f49;
+  border-radius: 5px;
+}
+#topbar .search-input-form input {
+  color: var(--color-text);
+  outline: 0;
+}
+#topbar .search-input-form button {
+  background: #d197ff;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 1366px) {
+  #topbar .search-input-form {
+    width: 100%;
+  }
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header .nav-for-web {
+  background: #453f49;
+}
+#header .nav-for-web .navbar-nav {
+  margin: 0;
+  padding: 0;
+  padding: 0px 33px;
+}
+#header .nav-for-web ul > li {
+  white-space: nowrap;
+  position: relative;
+}
+#header .nav-for-web ul > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 1px;
+  top: 5px;
+  bottom: 0;
+  right: -30px;
+  background-color: #fff;
+}
+#header .nav-for-web ul li a {
+  color: var(--color-white);
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+#header .nav-for-mobile {
+  z-index: 9;
+}
+#header .nav-for-mobile .close-icon {
+  width: 35px;
+  height: 35px;
+  font-size: 40px;
+  color: var(--color-primary);
+}
+
+@media (max-width: 1399px) {
+  #header .nav-for-web ul > li:not(:last-child)::after {
+    right: -15px;
+  }
+}
+@media (max-width: 1199px) {
+  #header .nav-for-web ul > li:not(:last-child)::after {
+    display: none;
+  }
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero-section .hero-box {
+  position: relative;
+  width: 100%;
+}
+#hero-section .movie-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#hero-section .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(69, 63, 73, 0.9);
+}
+#hero-section .hero-box:hover .overlay {
+  opacity: 1;
+}
+#hero-section .overlay-details .info .movie-name {
+  width: 35%;
+}
+#hero-section .overlay-details .info .movie-name h2 {
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: var(--color-white);
+}
+#hero-section .overlay-details .info .movie-name p {
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--color-white);
+}
+#hero-section .overlay-details .info .movie-name p span {
+  color: var(--color-primary);
+}
+#hero-section .overlay-details .info .movie-name span {
+  height: 100%;
+  width: 100%;
+}
+#hero-section .overlay-details .info .movie-name span img {
+  height: 16px;
+}
+#hero-section .overlay-details .info .movie-badge-box {
+  background: var(--color-primary);
+}
+#hero-section .overlay-details .info .movie-badge-box p {
+  margin: 0;
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 9px;
+  color: var(--color-white);
+}
+#hero-section .overlay-details .play-button {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 5px solid var(--color-primary);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero-section .overlay-details .play-button .play-icon {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+#hero-section .overlay-details .movie-title p {
+  font-family: var(--font-default);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--color-primary);
+}/*# sourceMappingURL=style.css.map */
